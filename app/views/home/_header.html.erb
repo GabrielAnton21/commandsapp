@@ -1,6 +1,7 @@
 
+<div class="headerimage">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark">
   <%= link_to 'Romanul', root_path, class:"navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -9,12 +10,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to "Școala ȋn limba romȃnă", home_scoalaromana_path, class:"btn btn-light btn-sm" %>
+        <%= link_to "Școala ȋn limba romȃnă", home_scoalaromana_path, class:"btn" %>
       </li>
       <li class="nav-item dropdown">
       <%# <div class="btn-group"> %>
-        <%= link_to "Despre Noi", home_desprenoi_path, class:"btn btn-light btn-sm" %>
-        <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <%= link_to "Despre Noi", home_desprenoi_path, class:"btn" %>
+        
+        <button type="button" class="badge badge-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
   </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -24,12 +27,16 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</a>
         </div> 
+        
+        </div>
         <%# </div> %>
       </li>
       <li class="nav-item dropdown">
       <%# <div class="btn-group"> %>
-        <%= link_to "Eventimente", home_evenimente_path, class:"btn btn-light btn-sm" %>
-        <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <%= link_to "Eventimente", home_evenimente_path, class:"btn" %>
+        
+        <button type="button" class="badge badge-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
     <span class="sr-only">Toggle Dropdown</span>
   </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,17 +44,60 @@
           <a class="dropdown-item" href="#">SONDAJE DE OPINIEE</a>
         </div> 
         <%# </div> %>
+
+        </div>
       </li>
       <li class="nav-item">
-        <%= link_to "Donaţii", home_donatii_path, class:"btn btn-light btn-sm" %>
+        <%= link_to "Donaţii", home_donatii_path, class:"btn" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Contact", home_contact_path, class:"btn btn-light btn-sm" %>
+        <%= link_to "Contact", home_contact_path, class:"btn" %>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <%# <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> %>
   </div>
 </nav>
+
+</div>
+  
+  <style>
+  .navbar {
+  /* The image used */
+  background-image: url("https://romanulonline.org/wp-content/uploads/2019/12/DSC_0189-1024x683.jpg");
+
+  min-height: 90px;
+
+  /* Center and scale the image nicely */
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+
+  /* Needed to position the navbar */
+  /* position: fixed; */
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn{
+    font-size: 12px;
+    color: #FFFFFF
+    
+}
+
+.navbar-brand  {
+  color:#FFFFFF
+}
+
+.navbar-brand:hover{
+  color:#FFFF00
+}
+  </style>
+
+
