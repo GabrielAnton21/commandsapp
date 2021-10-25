@@ -1,8 +1,21 @@
 
+
 <div class="headerimage">
 
-<nav class="navbar fixed-top navbar-expand-md navbar-dark">
-  <%= link_to 'Romanul', root_path, class:"navbar-brand" %>
+<div>
+<div class="row">
+<div class="col-md-6">
+<button class="btn btn-primary bt-lg">Donatii Astazi</button>
+</div>
+<div class="col-md-6">
+<button class="btn btn-secondary bt-lg">Visitati Facebook</button>
+</div>
+</div>
+</div>
+
+
+<nav class="navbar fixed-top navbar-expand-md navbar-light">
+  <%= link_to image_tag("romanul-removebg-preview.png", alt: "logo", height: 90, width: 90), root_path, class:"images" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,36 +25,36 @@
       <li class="nav-item">
         <%= link_to "Școala ȋn limba romȃnă", home_scoalaromana_path, class:"btn" %>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
       <%# <div class="btn-group"> %>
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Despre Noi", home_desprenoi_path, class:"btn" %>
-        
-        <button type="button" class="badge badge-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
-  </button>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        </button>
+        <div class="dropdown-menu" style="color: #FFFF00;">
           <a class="dropdown-item" href="#">MISIUNE ȘI OBIECTIVE</a>
           <a class="dropdown-item" href="#">REGULAMENT DE FUNCȚIONARE</a>
           <a class="dropdown-item" href="#">CONSILIUL DE ADMINISTRAŢIE</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</a>
+          <%# <a class="dropdown-item" href="#">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</a> %>
+          <%= link_to "ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ", home_inscriere_path, class:"dropdown-item"%>
         </div> 
         
         </div>
         <%# </div> %>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
       <%# <div class="btn-group"> %>
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Eventimente", home_evenimente_path, class:"btn" %>
-        
-        <button type="button" class="badge badge-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" style="color: #FFFF00;">
           <a class="dropdown-item" href="#">SERVICI ȘI AFACERI</a>
           <a class="dropdown-item" href="#">SONDAJE DE OPINIEE</a>
+          <%= link_to "REZERVARE LOCURI", home_reservare_path, class:"dropdown-item"%>
         </div> 
         <%# </div> %>
 
@@ -64,39 +77,185 @@
 </div>
   
   <style>
-  .navbar {
+  .navbar{
   /* The image used */
-  background-image: url("https://romanulonline.org/wp-content/uploads/2019/12/DSC_0189-1024x683.jpg");
+  /* background-image: url("https://romanulonline.org/wp-content/uploads/2020/11/hartford-ct.jpg"); */
 
-  min-height: 90px;
+  background-color: #4169E1;
+  min-height: 125px;
+  color: #FFFF00;
+  
 
   /* Center and scale the image nicely */
-  background-position: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
+  /* background-attachment: center; */
 
   /* Needed to position the navbar */
   /* position: fixed; */
 }
 
-nav ul {
+.navbar ul {
     margin-left: auto;
     margin-right: auto;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn{
-    font-size: 12px;
-    color: #FFFFFF
+ .btn{
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
     
 }
 
+.btn:hover{
+  font-size: 19.5px;
+  color: #FFFF00;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+  font-weight:bold;
+  float: left;
+}
+
 .navbar-brand  {
-  color:#FFFFFF
+  color:#000000
 }
 
 .navbar-brand:hover{
   color:#FFFF00
+}
+
+.badge{
+  /* width: 100%;
+  height: 100%; */
+  font-size: 18px;
+  color: #FFFF00;
+  font-weight: bold;
+  /* box-sizing: border-box; */
+  display: inline;
+  position: static;
+    
+}
+
+.dropdown-lead{
+    /* width: 80%; */
+    
+}
+.dropdown-toggle{
+    /* width: 20%; */
+    /* float: right; */
+    box-sizing: border-box;
+    display: inline;
+    color: #FFFFFF; !important
+    width: 20%; !important
+    height: 20%; !important
+    border: none; !important
+    
+}
+
+.navbar li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.badge-pill{
+background-color: transparent;
+cursor: pointer;
+
+
+}
+
+.badge-pill:hover{
+  color: yellow;
+}
+
+.navbar-toggler-icon{
+  color: #FFFF00;
+}
+
+
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  /* background: transparent; */
+  border: none;
+  border-bottom: 4px solid #eee;
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 16px 'Bitter', sans-serif; /* use google font */
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #4169E1; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: white; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+  color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* //// Slide Left  //// */
+
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+.bouncein:hover:before,
+.bouncein:hover:after{
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+}
+
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
 }
   </style>
 

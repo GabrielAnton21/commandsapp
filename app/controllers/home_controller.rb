@@ -12,4 +12,9 @@ class HomeController < ApplicationController
   end
   def donatii 
   end
+  def inscriere
+  end
+  def reservare
+  end
+  
 end
