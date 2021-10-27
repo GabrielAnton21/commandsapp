@@ -62,12 +62,12 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  right:-60px;
+  right:-50px;
   color:#FFFFFF;
 }
 
 .prev {
-  left:-60px;
+  left:-50px;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -209,6 +209,13 @@ display: block;
 
 .bodycolor{
   background-color: #FFFFFF;
+  /* background-color: #FFFF00;;
+  color: #FFFFFF; */
+}
+
+.bodycolorred{
+  background-color: #FFFFFF;
+  /* background-color: #FF0000; */
 }
 
 .margintop-col{
@@ -316,7 +323,7 @@ display: block;
   text-align: center;
   /* box-shadow: 1px 1px 2px #e6e6e6; */
   cursor: pointer;
-  background: #fff url("https://romanulonline.org/wp-content/uploads/2020/12/Picture2-1024x254.png") no-repeat center center;
+  /* background: #fff url("https://romanulonline.org/wp-content/uploads/2020/12/Picture2-1024x254.png") no-repeat center center; */
 }
 
 .view .mask,
@@ -338,11 +345,13 @@ display: block;
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
-  background: #000;
+  background: #4169E1;
   color: #fff;
   font-family: Raleway, serif;
   text-transform: uppercase;
-  box-shadow: 0 0 1px #000
+  box-shadow: 0 0 1px #000;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .view a.info:hover {
@@ -361,7 +370,7 @@ display: block;
 
 .view-first .mask {
   opacity: 0;
-  background-color: rgba(135, 206, 250, 0.44);
+  background-color: rgba(255, 255, 255, 0.44);
   transition: all 0.4s ease-in-out;
 }
 
@@ -395,6 +404,89 @@ div#all {
   width: 100%;
   height: 100%;
 }
+
+
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  /* background: transparent; */
+  border: none;
+  border-bottom: 4px solid #eee;
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 16px 'Bitter', sans-serif; /* use google font */
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #4169E1; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: white; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+  color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* //// Slide Left  //// */
+
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+.bouncein:hover:before,
+.bouncein:hover:after{
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+}
+
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
 </style>
 
 </head>
@@ -427,7 +519,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 <hr class="my-4">
   <p class="lead">
   <div class="wrapper">
-    <%= link_to "Learn More", home_scoalaromana_path, class:"buttonfx slideleft bouncein"%>
+    <%= link_to "Sign Up Here!", home_scoalaromana_path, class:"buttonfx slideleft bouncein"%>
     </div>
   </p>
   </div>
@@ -442,7 +534,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
             Due to public health concerns, there will be no in-person gathering but instead people are encouraged to drop by at their convenience between 
             Dec 1-7, take photos and post them #1DecCT2020 #DeparteDarImpreuna</p>
             <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="#">Hover Me!</a>
+            <a class="buttonfx slideleft bouncein" href="#">LEARN MORE</a>
             </div>
           </div>
         </div>
@@ -458,11 +550,12 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 
 <div class="row bodycolor">
 <div class="col-md-3 margintop-col" id="monster">
-<h2>Welcome to Rom&#226nul Corp! 
-</h2>
+<h4>Welcome to Rom&#226nul Corp! 
+</h4>
 <p>Established in Connecticut, USA in 2011 </p>
   <img src="https://romanulonline.org/wp-content/uploads/2021/10/Small-business-or-individual-Sponsorship-package-2021-791x1024.jpg" style="width:100%">
   <br><br>
+  <hr>
   <ul class="list-unstyled">
   <li class="media">
     <%# <img class="mr-3" src="..." alt="Generic placeholder image"> %>
@@ -477,7 +570,8 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
   <div class="view view-first">
     <img src="https://romanulonline.org/wp-content/uploads/2020/12/Picture2-1024x254.png">
     <div class="mask">
-      <a href="#" class="info">Donate Here!</a>
+    <%# <a href="#" >DONATE HERE!</a> %>
+      <%= link_to "DONATE HERE!", home_donatii_path, class:"info" %>
     </div>
   </div>
   </li>
@@ -497,6 +591,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
     low fees for members and non-members.
     </div>
   </li>
+  <hr>
   <%# <li class="media">
     <img class="mr-3" src="..." alt="Generic placeholder image">
     <div class="media-body">
@@ -509,24 +604,26 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 
 <div class="col-md-6 margintop-col">
 
+
+
 <div class="slideshow-container">
 
 <div class="mySlides fade-in-image">
   <div class="numbertext">1 / 3</div>
   <img src="https://romanulonline.org/wp-content/uploads/2021/06/197361561_10159248708181530_4671443084294139421_n-1024x498.jpg" style="width:100%" class="center">
-  <div class="text">Caption Text</div>
+  <%# <div class="text">Caption Text</div> %>
 </div>
 
 <div class="mySlides fade-in-image">
   <div class="numbertext">2 / 3</div>
   <img src="https://romanulonline.org/wp-content/uploads/2021/06/196650328_10159248706591530_5435668141062256519_n-1024x498.jpg" style="width:100%" class="center">
-  <div class="text">Caption Two</div>
+  <%# <div class="text">Caption Two</div> %>
 </div>
 
 <div class="mySlides fade-in-image">
   <div class="numbertext">3 / 3</div>
   <img src="https://romanulonline.org/wp-content/uploads/2021/06/196619343_10159248707496530_9161212720995755022_n-1024x498.jpg" style="width:100%" class="center">
-  <div class="text">Caption Three</div>
+  <%# <div class="text">Caption Three</div> %>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -541,8 +638,8 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 </div> %>
 
 <div>
-<p style="text-align: center">NEW June 6, 2021: The Romanian Language School at the end of the first semester of classes
-Certificate award ceremony and picnic in park on June 5-6 with in-person meet and greet, playing Romanian children games, Romanian food and lots of fun. Vorbim romȃnește!
+<p style="text-align: justify">NEW June 6, 2021: The Romanian Language School at the end of the first semester of classes
+Certificate award ceremony and picnic in park on June 5-6 with in-person meet and greet, playing Romanian children games, Romanian food and lots of fun. Vorbim rom&#226nește!
 Please visit the School’s page or visit us on Facebook for more pictures from the event.</p>
 </div>
 
@@ -575,23 +672,36 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
       <div class="col-md-6" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_3-791x1024.jpg" alt="Card image cap">
+            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_3-791x1024.jpg" alt="Card image cap" style="height: 300px;">
           <div class="card-body">
             <h4 class="card-title">Newsletter</h4>
-            <p class="card-text">Romanul Corp Spring ’21 Newsletter has been issued.</p>
+            <p class="card-text">Rom&#226nul Corp Spring ’21 Newsletter has been issued.</p>
             <div class="wrapper">
             <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1Zsp8LWhQoCClNMdq59MH9D9qOiyJ9-hq/view">View PDF</a>
             </div>
           </div>
         </div>
+
+        <div class="card mb-2">
+          <%# <img class="card-img-top"
+            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_3-791x1024.jpg" alt="Card image cap" style="height: 300px;"> %>
+          <div class="card-body">
+            <h4 class="card-title">Newsletter</h4>
+            <p class="card-text">Rom&#226nul Corp Spring ’21 Newsletter has been issued.</p>
+            <div class="wrapper">
+            <%# <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1Zsp8LWhQoCClNMdq59MH9D9qOiyJ9-hq/view">View PDF</a> %>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="col-md-6" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/12/felicitare-romanul-2020-768x512.jpg" alt="Card image cap">
+            src="https://romanulonline.org/wp-content/uploads/2020/12/felicitare-romanul-2020-768x512.jpg" alt="Card image cap" style="height: 300px;">
           <div class="card-body">
-            <h4 class="card-title">It’s Christmas and New Year Season!</h4>
+            <h4 class="card-title">La Multi Ani!</h4>
             <p class="card-text">
           <ul class="list-unstyled">
           <li><a href="https://www.facebook.com/antonia.baroga/videos/10221902939349986">The Carol of All Carols</a> – sung by Iuliana Roata and her friends from the Holy Brancoveanu Romanian Orthodox Church in Fairfield, CT</li>
@@ -616,13 +726,16 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
       <div class="col-md-6" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2021/06/seminar-28-mai-EN-791x1024.jpg" alt="Card image cap">
+            src="https://romanulonline.org/wp-content/uploads/2020/02/Pitesti-Experiment-movie-screening-Mailchimp-1024x785.jpg" alt="Card image cap" style="height: 300px;">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <h4 class="card-title">Experimentul Pitesti</h4>
+            <p class="card-text">As an independent production funded entirely by crowdsourcing, this is the 
+            first feature film to depict the notorious Pitești Experiment in early communist 
+            Romania (1949-1952) under Soviet occupation. 
+            Director and Co-Screenwriter Victoria Baltag is currently a Ph.D. Candidate in History and Anthropology at the University of London.  
+            She also holds an MFA in Film, History, and Television from the University of Birmingham.</p>
             <div class="wrapper">
-          <a class="buttonfx slideleft bouncein" href="#">LEARN MORE</a>
+          <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1lgmKEkk8QbF8x8fS1eBg12GYSecxrdg0/view">MORE INFO</a>
           </div>
           </div>
         </div>
@@ -631,13 +744,17 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
       <div class="col-md-6" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_1-791x1024.jpg" alt="Card image cap">
+            src="https://romanulonline.org/wp-content/uploads/2020/11/eminescu.jpg" alt="Card image cap" style="height: 300px;">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <h4 class="card-title">Holiday Reading</h4>
+            <p class="card-text">May we suggest a gift for Christmas? 
+            Mihai Eminescu -The Legend of the Evening Star & Selected Poems. 
+            This is a bibliophile edition that includes the remarkable translation by 
+            our friend Adrian George Sahlean. of Mihai Eminescu’s poems in English. 
+            The book is intended for native English speakers, universities and colleges, 
+            libraries or Eastern European study centers.</p>
             <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="#">LEARN MORE</a>
+            <a class="buttonfx slideleft bouncein" href="https://www.amazon.com/Mihai-Eminescu-Legend-Evening-Selected/dp/0965060632/ref=pd_sbs_14_1/135-4935647-7811748?_encoding=UTF8&pd_rd_i=0965060632&pd_rd_r=641a09ff-ffe3-4174-9b85-814943204a83&pd_rd_w=c8h0z&pd_rd_wg=3ToHx&pf_rd_p=b65ee94e-1282-43fc-a8b1-8bf931f6dfab&pf_rd_r=ZEAV0EA0PFVR0D4KCCZ1&psc=1&refRID=ZEAV0EA0PFVR0D4KCCZ1">BUY IT HERE</a>
             </div>
           </div>
         </div>
@@ -661,8 +778,18 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
 
 </div>
 <!--/.Carousel Wrapper-->
+<hr>
+<div style="background-color: #4169E1; color: #FFFFFF; padding: 20px; "> 
+<h1>Adopt A Family</h1>
+<p>
+The annual Adopt-A-Family fundraising campaign has started!  
+This year we will adopt a single mother with one child who needs our full support. 
+Please see the details on our Donations page. Thank you for your generosity!
+</p>
+<img class="card-img-top" src="https://romanulonline.org/wp-content/uploads/2019/12/colaci-craciun-1024x636.jpg" alt="Card image cap" style="height: 300px;">
 
-
+</div>
+<br><br><br>
 </div>
 
 
@@ -680,11 +807,13 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
   </div>
   <hr>
   <%= link_to "Database", members_path, class:"buttonfx slideleft bouncein"%>
+  <hr>
+  <h2 class="display-6">We invite Romanian-American businesses from Connecticut to promote their business at this event or to sponsor the event.</h2>
+
+<p>The organizer provides the rented pavilion (nr. 2), cold soft drinks and snacks. We suggest a donation of min. $10 at the event or online at www.romanulonline.org/donations via Paypal to cover for the expenses. Thank you for your support!</p>
 </div>
 
 </div>
-
-
 
 
 
