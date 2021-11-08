@@ -1,0 +1,36 @@
+current directory: C:/Users/Gabriel Anton/RomanulOnline/commandsapp/test/bundle/ruby/3.0.0/gems/bson-4.12.1/ext/bson
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/site_ruby/3.0.0 -r ./siteconf20211107-12340-36224.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/Gabriel Anton/RomanulOnline/commandsapp/test/bundle/ruby/3.0.0/gems/bson-4.12.1/ext/bson
+make DESTDIR\= clean
+
+current directory: C:/Users/Gabriel Anton/RomanulOnline/commandsapp/test/bundle/ruby/3.0.0/gems/bson-4.12.1/ext/bson
+make DESTDIR\=
+generating bson_native-x64-mingw32.def
+compiling bytebuf.c
+compiling endian.c
+compiling init.c
+compiling libbson-utf8.c
+compiling read.c
+read.c: In function 'rb_bson_byte_buffer_get_hash':
+read.c:381:90: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long int' [-Wformat=]
+  381 |     pvt_raise_decode_error(rb_sprintf("Expected to read %d bytes for the hash but read %ld bytes", length, READ_PTR(b) - start_ptr));
+      |                                                                                        ~~^
+      |                                                                                          |
+      |                                                                                          long int
+      |                                                                                        %lld
+read.c: In function 'rb_bson_byte_buffer_get_array':
+read.c:407:90: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long int' [-Wformat=]
+  407 |     pvt_raise_decode_error(rb_sprintf("Expected to read %d bytes for the hash but read %ld bytes", length, READ_PTR(b) - start_ptr));
+      |                                                                                        ~~^
+      |                                                                                          |
+      |                                                                                          long int
+      |                                                                                        %lld
+compiling util.c
+compiling write.c
+linking shared-object bson_native.so
+
+current directory: C:/Users/Gabriel Anton/RomanulOnline/commandsapp/test/bundle/ruby/3.0.0/gems/bson-4.12.1/ext/bson
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bson_native.so ./.gem.20211107-12340-8ly6tp
