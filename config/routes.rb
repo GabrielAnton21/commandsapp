@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :posts
+  get 'posts/index'
+  get 'posts/show'
+  get 'posts/new'
+  get 'posts/create'
+  get 'posts/edit'
+  get 'posts/update'
+  get 'posts/destroy'
+  devise_for :admins
   resources :members
   #get 'home/index'
   get 'home/desprenoi'
