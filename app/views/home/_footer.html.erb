@@ -1,7 +1,11 @@
 
 
-<div style="background-color: #FFFFFF; height:90px;">
+<div style="background-color: #FFFFFF; height:130px;">
 <br>
+<div class="justify-content-center" style="text-align: center;">
+<p>Românul is a 501(c)(3) not for profit organization.
+This work by Romanul Corp. is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0 Unported License.</a></p> 
+</div>
 <ul class="nav justify-content-center">
   <li class="nav-item">
     <%= link_to "Despre Noi", home_desprenoi_path, class:"nav-link" %>
@@ -13,6 +17,7 @@
     <a class="nav-link" href="#">Voluntariat</a>
   </li>
 </ul>
+
 <% if admin_signed_in? %>
 <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class:"nav-item" %>
 <% else %>
