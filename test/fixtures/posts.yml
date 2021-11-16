@@ -4,8 +4,14 @@ one:
   heading: MyString
   subheading: MyString
   text: MyString
+  link: MyString
+  buttontext: MyString
+  imagelink: MyString
 
 two:
   heading: MyString
   subheading: MyString
   text: MyString
+  link: MyString
+  buttontext: MyString
+  imagelink: MyString

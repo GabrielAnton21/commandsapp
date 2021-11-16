@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :heading
       t.string :subheading
       t.text :text
+      t.string :link
+      t.string :buttontext
 
       t.timestamps
     end

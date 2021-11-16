@@ -17,6 +17,9 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Heading", with: @post.heading
     fill_in "Subheading", with: @post.subheading
     fill_in "Text", with: @post.text
+    fill_in "Link", with: @post.link
+    fill_in "Buttontext", with: @post.buttontext
+    fill_in "Imagelink", with: @post.imagelink
     click_on "Create Post"
 
     assert_text "Post was successfully created"
@@ -30,6 +33,9 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Heading", with: @post.heading
     fill_in "Subheading", with: @post.subheading
     fill_in "Text", with: @post.text
+    fill_in "Link", with: @post.link
+    fill_in "Buttontext", with: @post.buttontext
+    fill_in "Imagelink", with: @post.imagelink
     click_on "Update Post"
 
     assert_text "Post was successfully updated"

@@ -1,5 +1,6 @@
 
 <br><br><br><br>
+<% if admin_signed_in? %>
 <div class="jumbotron">
 <p>
   <strong>First name:</strong>
@@ -40,10 +41,10 @@
   <strong>Country:</strong>
   <%= @member.country %>
 </p>
-
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
 </div>
+<%end%>
 
 <%# <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

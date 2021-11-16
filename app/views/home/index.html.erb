@@ -550,7 +550,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 
 <div class="row bodycolor">
 <div class="col-md-3 margintop-col" id="monster">
-<div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #fcd116;">
+<div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
 <h4 style="font-weight: bold;">Welcome to Rom&#226nul Corp! 
 </h4>
 <p>Established in Connecticut, USA in 2011 </p>
@@ -561,7 +561,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
   <li class="media">
     <%# <img class="mr-3" src="..." alt="Generic placeholder image"> %>
     <div class="media-body">
-    <div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #fcd116;">
+    <div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
       <h5 class="mt-0 mb-1" style="font-weight: bold;">Donate And Promote</h5>
       Want to be listed on the promotion page for Romanian services and businesses in Connecticut and in nearby states? Click below on “Now we’re all on the same page”.
     </div>
@@ -582,12 +582,14 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
   <%# <img class="mr-3" src="https://romanulonline.org/wp-content/uploads/2020/12/Picture2-1024x254.png" alt="ScoalaRomana" style="width: 275px; height:100px;"> %>
   <li class="media my-4">
     <div class="media-body">
-    <div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #fcd116;">
+    <div class="jumbotron" style="max-height: 820px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
       <h5 class="mt-0 mb-1" style="font-weight: bold;">&#350coala &#238n limba Rom&#226na</h5>
     News from the Romanian Language School – 24 October, 2021 
     After a meet and greet weekend, the Romanian language school is currently in session for all our classes. This semester we learn Romanian by traveling virtually throughout the country.  
     Please visit us on our school web page for details. 
-    Music & Rhymes class for 4-7 years started on October 23rd. Registration for Spring 2022 semester will start in November 2021. Please stay tuned!
+    Music & Rhymes class for 4-7 years started on October 23rd. 
+    <hr>
+    Registration for Spring 2022 semester will start in November 2021. Please stay tuned!
     What do we offer in support of our community:
     curriculum using the heritage language methodology adapted to each level
     small classes up to 5 students
@@ -611,7 +613,7 @@ important aspects of the Romanian culture and civilization. <b>Vorbim rom&#226ne
 <div class="col-md-6 margintop-col">
 
 
-<div class="jumbotron" style="max-height: 500px; background-color: #fcd116;">
+<div class="jumbotron" style="max-height: 500px; background-color: #002b7f; color: #FFFFFF;">
 <div class="slideshow-container">
 
 <div class="mySlides fade-in-image">
@@ -676,39 +678,25 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
     <!--First slide-->
     <div class="carousel-item active">
 
-      <%# <div class="col-md-6" style="float:left">
-       <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_3-791x1024.jpg" alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h4 class="card-title">Newsletter</h4>
-            <p class="card-text">Rom&#226nul Corp Spring ’21 Newsletter has been issued.</p>
-            <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1Zsp8LWhQoCClNMdq59MH9D9qOiyJ9-hq/view">View PDF</a>
-            </div>
-          </div>
-        </div> %>
         <div class="col-md-6" style="float:left">
-        <%# <% @posts.each do |posts| %>
         <div class="card text-center">
             <div class="card-header">
-               Featued 
+               <%= @post.find(5).heading %>
             </div>
         <div class="card-body">
         <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2021/03/Spring-2021-Romanul-Newsletter-V2-orizontal_Page_3-791x1024.jpg" alt="Card image cap" style="height: 240px;">
+            src=<%= @post.find(5).imagelink %> alt="Card image cap" style="height: 240px;">
           <br>
-          <h4 class="card-title">Newsletter</h4>
-            <<p class="card-text">text</p>  
+          <h4 class="card-title"><%= @post.find(5).subheading %></h4>
+            <p class="card-text"><%= @post.find(5).text %></p>  
             <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1Zsp8LWhQoCClNMdq59MH9D9qOiyJ9-hq/view">View PDF</a>
+            <a class="buttonfx slideleft bouncein" href=<%= @post.find(5).link %>><%= @post.find(5).buttontext %></a>
             </div>
         </div>
         <div class="card-footer text-muted">
           2 days ago
         </div>
         </div>
-        <%# <%end%> 
         </div>
 
       
@@ -716,23 +704,18 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
       <div class="col-md-6" style="float:left">
         <div class="card text-center">
             <div class="card-header">
-               Featured
+               <%= @post.find(6).heading %>
             </div>
         <div class="card-body">
         <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/12/felicitare-romanul-2020-768x512.jpg" alt="Card image cap" style="height: 240px;">
+            src=<%= @post.find(6).imagelink %> alt="Card image cap" style="height: 240px;">
           <br>
-          <h4 class="card-title">La Multi Ani!</h4>
+          <h4 class="card-title"><%= @post.find(6).subheading %></h4>
             <p class="card-text">
-          <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com/antonia.baroga/videos/10221902939349986">The Carol of All Carols</a> – sung by Iuliana Roata and her friends from the Holy Brancoveanu Romanian Orthodox Church in Fairfield, CT</li>
-          <%# <li><a href="https://www.youtube.com/watch?v=oQHWMu-sj8g">A 2020 online Christmas festival</a> – organized by the Holy Transfiguration Romanian Orthodox Church in Manchester, CT</li>
-          <li><a href="https://www.youtube.com/watch?v=Bs1n04lLTpg">Lord, Lord we exalt</a> – a traditional Romanian carol sung online by an a capella group</li>
-          <li><a href="https://www.facebook.com/antonia.baroga/videos/10221902083528591">High the Star is Rising</a> – a traditional Romanian carol sung in English.</li> %>
-          </ul>
+            <%= @post.find(6).text %>
           </p>
             <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://www.facebook.com/hashtag/1decct2020">LEARN MORE</a>
+            <a class="buttonfx slideleft bouncein" href=<%= @post.find(6).link %>><%= @post.find(6).buttontext %></a>
             </div>
         </div>
         <div class="card-footer text-muted">
@@ -741,26 +724,6 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
         </div>
       </div>
 
-      <%# <div class="col-md-6" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/12/felicitare-romanul-2020-768x512.jpg" alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h4 class="card-title">La Multi Ani!</h4>
-            <p class="card-text">
-          <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com/antonia.baroga/videos/10221902939349986">The Carol of All Carols</a> – sung by Iuliana Roata and her friends from the Holy Brancoveanu Romanian Orthodox Church in Fairfield, CT</li>
-          <li><a href="https://www.youtube.com/watch?v=oQHWMu-sj8g">A 2020 online Christmas festival</a> – organized by the Holy Transfiguration Romanian Orthodox Church in Manchester, CT</li>
-          <li><a href="https://www.youtube.com/watch?v=Bs1n04lLTpg">Lord, Lord we exalt</a> – a traditional Romanian carol sung online by an a capella group</li>
-          <li><a href="https://www.facebook.com/antonia.baroga/videos/10221902083528591">High the Star is Rising</a> – a traditional Romanian carol sung in English.</li>
-          </ul>
-          </p>
-            <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://www.facebook.com/hashtag/1decct2020">LEARN MORE</a>
-            </div>
-          </div>
-        </div>
-      </div> %>
 
     </div>
     <!--/.First slide-->
@@ -771,20 +734,16 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
      <div class="col-md-6" style="float:left">
       <div class="card text-center">
           <div class="card-header">
-            Featured
+            <%= @post.find(7).heading %>
           </div>
         <div class="card-body">
         <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/02/Pitesti-Experiment-movie-screening-Mailchimp-1024x785.jpg" alt="Card image cap" style="height: 240px;">
+            src=<%= @post.find(7).imagelink %> alt="Card image cap" style="height: 240px;">
           <br>
-          <h4 class="card-title">Experimentul Pitesti</h4>
-            <p class="card-text">As an independent production funded entirely by crowdsourcing, this is the 
-            first feature film to depict the notorious Pitești Experiment in early communist 
-            <%# Romania (1949-1952) under Soviet occupation. 
-            Director and Co-Screenwriter Victoria Baltag is currently a Ph.D. Candidate in History and Anthropology at the University of London.  
-            She also holds an MFA in Film, History, and Television from the University of Birmingham.</p> %> </p>
+          <h4 class="card-title"><%= @post.find(7).subheading %></h4>
+            <p class="card-text"><%= @post.find(7).text %></p>
             <div class="wrapper">
-          <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1lgmKEkk8QbF8x8fS1eBg12GYSecxrdg0/view">MORE INFO</a>
+          <a class="buttonfx slideleft bouncein" href=<%= @post.find(7).link %>><%= @post.find(6).buttontext %></a>
           </div>
        </div>
       <div class="card-footer text-muted">
@@ -796,21 +755,17 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
       <div class="col-md-6" style="float:left">
         <div class="card text-center">
             <div class="card-header">
-               Featured
+               <%= @post.find(8).heading %>
             </div>
         <div class="card-body">
          <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/11/eminescu.jpg" alt="Card image cap" style="height: 240px;">
+            src=<%= @post.find(8).imagelink %> alt="Card image cap" style="height: 240px;">
             <br>
-          <h4 class="card-title">Holiday Reading</h4>
-            <p class="card-text">May we suggest a gift for Christmas? 
-            Mihai Eminescu -The Legend of the Evening Star & Selected Poems. 
-            <%# This is a bibliophile edition that includes the remarkable translation by 
-            our friend Adrian George Sahlean of Mihai Eminescu’s poems in English. 
-            The book is intended for native English speakers, universities and colleges, 
-            libraries or Eastern European study centers.</p> %></p>
+          <h4 class="card-title"><%= @post.find(8).subheading %></h4>
+            <p class="card-text"><%= @post.find(8).text %>
+            </p>
             <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://www.amazon.com/Mihai-Eminescu-Legend-Evening-Selected/dp/0965060632/ref=pd_sbs_14_1/135-4935647-7811748?_encoding=UTF8&pd_rd_i=0965060632&pd_rd_r=641a09ff-ffe3-4174-9b85-814943204a83&pd_rd_w=c8h0z&pd_rd_wg=3ToHx&pf_rd_p=b65ee94e-1282-43fc-a8b1-8bf931f6dfab&pf_rd_r=ZEAV0EA0PFVR0D4KCCZ1&psc=1&refRID=ZEAV0EA0PFVR0D4KCCZ1">BUY IT HERE</a>
+            <a class="buttonfx slideleft bouncein" href=<%= @post.find(8).link %>><%= @post.find(6).buttontext %></a>
             </div>
         </div>
         <div class="card-footer text-muted">
@@ -818,43 +773,6 @@ Please visit the School’s page or visit us on Facebook for more pictures from 
         </div>
       </div>
     </div>
-
-      <%# <div class="col-md-6" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/02/Pitesti-Experiment-movie-screening-Mailchimp-1024x785.jpg" alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h4 class="card-title">Experimentul Pitesti</h4>
-            <p class="card-text">As an independent production funded entirely by crowdsourcing, this is the 
-            first feature film to depict the notorious Pitești Experiment in early communist 
-            Romania (1949-1952) under Soviet occupation. 
-            Director and Co-Screenwriter Victoria Baltag is currently a Ph.D. Candidate in History and Anthropology at the University of London.  
-            She also holds an MFA in Film, History, and Television from the University of Birmingham.</p>
-            <div class="wrapper">
-          <a class="buttonfx slideleft bouncein" href="https://drive.google.com/file/d/1lgmKEkk8QbF8x8fS1eBg12GYSecxrdg0/view">MORE INFO</a>
-          </div>
-          </div>
-        </div>
-      </div> %>
-
-      <%# <div class="col-md-6" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://romanulonline.org/wp-content/uploads/2020/11/eminescu.jpg" alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h4 class="card-title">Holiday Reading</h4>
-            <p class="card-text">May we suggest a gift for Christmas? 
-            Mihai Eminescu -The Legend of the Evening Star & Selected Poems. 
-            This is a bibliophile edition that includes the remarkable translation by 
-            our friend Adrian George Sahlean. of Mihai Eminescu’s poems in English. 
-            The book is intended for native English speakers, universities and colleges, 
-            libraries or Eastern European study centers.</p>
-            <div class="wrapper">
-            <a class="buttonfx slideleft bouncein" href="https://www.amazon.com/Mihai-Eminescu-Legend-Evening-Selected/dp/0965060632/ref=pd_sbs_14_1/135-4935647-7811748?_encoding=UTF8&pd_rd_i=0965060632&pd_rd_r=641a09ff-ffe3-4174-9b85-814943204a83&pd_rd_w=c8h0z&pd_rd_wg=3ToHx&pf_rd_p=b65ee94e-1282-43fc-a8b1-8bf931f6dfab&pf_rd_r=ZEAV0EA0PFVR0D4KCCZ1&psc=1&refRID=ZEAV0EA0PFVR0D4KCCZ1">BUY IT HERE</a>
-            </div>
-          </div>
-        </div>
-      </div> %>
 
     </div>
 
@@ -885,6 +803,7 @@ Please see the details on our Donations page. Thank you for your generosity!
 <img class="card-img-top" src="https://romanulonline.org/wp-content/uploads/2019/12/colaci-craciun-1024x636.jpg" alt="Card image cap" style="height: 300px;">
 
 </div>
+
 <br><br><br>
 </div>
 
@@ -904,12 +823,19 @@ Please see the details on our Donations page. Thank you for your generosity!
   <hr>
   <% if admin_signed_in?%>
   <%= link_to "Members", members_path, class:"buttonfx slideleft bouncein"%>
-  <%= link_to "Posts", posts_index_path, class:"buttonfx slideleft bouncein"%>
+  <%= link_to "Posts", posts_path, class:"buttonfx slideleft bouncein"%>
   <% end %>
-  <hr>
-  <h2 class="display-6">We invite Romanian-American businesses from Connecticut to promote their business at this event or to sponsor the event.</h2>
+ 
+ <div class="jumbotron" style="max-height: 500px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
+  <h5 style="font-weight: bold;">We invite Romanian-American businesses from Connecticut to promote their business at our events!</h5>
 
-<p>The organizer provides the rented pavilion (nr. 2), cold soft drinks and snacks. We suggest a donation of min. $10 at the event or online at www.romanulonline.org/donations via Paypal to cover for the expenses. Thank you for your support!</p>
+<p>The organizer provides the rented pavilion (nr. 2), cold soft drinks and snacks. We suggest a donation of min. $10 at the event or online via Paypal to cover for the expenses. 
+<hr>
+Thank you for your support!</p>
+</div>
+<div class="wrapper">
+  <%= link_to "Donate Here", home_donatii_path, class:"buttonfx slideleft bouncein"%>
+  </div>
 </div>
 
 </div>
@@ -994,8 +920,8 @@ $(document).ready(function() {
 
 <%# <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> %>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html> 

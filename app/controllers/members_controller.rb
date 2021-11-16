@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :set_member, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!
+  #before_action :authenticate_admin!
 
   # GET /members or /members.json
   def index
@@ -26,8 +26,8 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to @member, notice: "Member was successfully created." }
-        format.json { render :show, status: :created, location: @member }
+        format.html { redirect_to home_inscriere_path, notice: "Member was successfully created." }
+        # format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @member.errors, status: :unprocessable_entity }
