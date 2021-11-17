@@ -17,6 +17,12 @@ class HomeController < ApplicationController
   end
   def reservare
   end
+  def consiliul
+  end
+  def regulamente
+  end
+  def misiuni
+  end
 
   private
   # Use callbacks to share common setup or constraints between actions.

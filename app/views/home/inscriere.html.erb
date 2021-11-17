@@ -1,7 +1,16 @@
 <br><br><br><br><br>
-<h1 class="display-3" id="heading">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</h1>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div>
+<link rel="stylesheet" type="text/css" href="commandsapp\app\assets\stylesheets\inscriere.css">
+
+</head>
+
+<div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
+<h1 class="display-3" id="heading">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ<h1>
+</div>
+
+<div class="mainPanel">
 <%= form_for Member.new do |f| %>
   <div class="form-group">
     <%= f.label :first_name %>
@@ -40,8 +49,9 @@
 
 </div>
 
-<br><br><br>
+<br>
 
+<div class="mainPanel">
 <p>Plata cotizației anuale se poate efectua cu orice tip de credit sau debit card, prin serviciul bancar securizat <em>PayPal</em>: selectați mai jos valoarea corespunzătoare, introduceţi numele dumneavoastră, apoi apăsați ”<strong>Pay Now</strong>”. Puteți plăti prin metoda "<em>PayPal Guest Checkout</em>" dacă nu aveți cont <em>PayPal</em>.<br />Cotizațiile membrilor organizației sunt scutite de taxe (<em>tax deductible</em>).</p>
 <!-- /wp:paragraph -->
 
@@ -66,6 +76,7 @@
 </tr>
 </tbody>
 </table>
+<br>
 <input name="currency_code" type="hidden" value="USD" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" type="image" /> <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0"></form><!-- /wp:html -->
 
 <!-- wp:paragraph -->
@@ -80,7 +91,7 @@
 
 <!-- wp:paragraph -->
 <p>Pentru a plăti cotizația anuală prin check, completați un check pentru ”<em>Românul Corp.</em>” ($25 pentru studenți până la 25 de ani, $25 pentru seniori de la 60 de ani, sau $50 - cotizația individuală pentru restul cazurilor), și trimiteți-l la adresa: <strong>Românul Corp, P.O. Box 1483, Fairfield, CT 06825</strong><br />Vă mulțumim !</p>
-
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

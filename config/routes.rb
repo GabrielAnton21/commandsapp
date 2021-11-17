@@ -11,10 +11,9 @@ Rails.application.routes.draw do
   resources :members
   #get 'home/index'
   get 'home/desprenoi'
-  get 'home/desprenoi/misiuni'
-  get 'home/desprenoi/regulamente'
-  get 'home/desprenoi/consiliul'
-  get 'home/desprenoi/inscriere'
+  get 'home/misiuni'
+  get 'home/regulamente'
+  get 'home/consiliul'
   get 'home/inscriere'
   get 'home/reservare'
 

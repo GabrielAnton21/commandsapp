@@ -35,9 +35,9 @@
     <span class="sr-only">Toggle Dropdown</span>
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">MISIUNE ȘI OBIECTIVE</a>
-          <a class="dropdown-item" href="#">REGULAMENT DE FUNCȚIONARE</a>
-          <a class="dropdown-item" href="#">CONSILIUL DE ADMINISTRAŢIE</a>
+          <%= link_to "MISIUNE ȘI OBIECTIVE", home_misiuni_path, class:"dropdown-item" %>
+          <%= link_to "REGULAMENT DE FUNCȚIONARE", home_regulamente_path, class:"dropdown-item" %>
+          <%= link_to "CONSILIUL DE ADMINISTRAŢIE", home_consiliul_path, class:"dropdown-item" %>
           <div class="dropdown-divider"></div>
           <%# <a class="dropdown-item" href="#">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</a> %>
           <%= link_to "ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ", home_inscriere_path, class:"dropdown-item"%>

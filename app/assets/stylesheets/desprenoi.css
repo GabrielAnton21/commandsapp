@@ -2,8 +2,8 @@
 .mainPanel{
     padding: 9%;
     margin: 5%;
-    border: 5px solid red;
-
+    border: 5px solid;
+background-color: white;
 }
 
 .paragraph{
