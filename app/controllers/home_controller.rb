@@ -10,8 +10,6 @@ class HomeController < ApplicationController
   def evenimente
   end
   def scoalaromana
-    @image = Image.all.with_attached_images
-
   end
   def donatii 
   end

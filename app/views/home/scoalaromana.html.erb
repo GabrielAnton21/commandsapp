@@ -831,10 +831,10 @@ Thank you, again. Mulțumim pentru interes!
 </section>
 
 
-<% (0...@image.size).each do |image| %> 
-    <%= image_tag(url_for(@image[image])) %>
+<%# <% (0...@image.count).each do |image| %> 
+    <%# <%= image_tag(url_for(@image[image])) %> %>
     <%# <%= content_tag(:iframe,'', width: 1000, height: 1000, src: url_for(@image[image])) %> 
-<%end %>
+<%# <%end %> %> %>
 
 
 

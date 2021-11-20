@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # get 'posts/update'
   # get 'posts/destroy'
   devise_for :admins
+  devise_scope :admin do
+  get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
   resources :members
   #get 'home/index'
   get 'home/desprenoi'
