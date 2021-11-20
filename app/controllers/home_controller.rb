@@ -10,6 +10,8 @@ class HomeController < ApplicationController
   def evenimente
   end
   def scoalaromana
+    @image = Image.all.with_attached_images
+
   end
   def donatii 
   end
@@ -24,6 +26,7 @@ class HomeController < ApplicationController
   def misiuni
   end
 
+
   private
   # Use callbacks to share common setup or constraints between actions.
   # def set_post
@@ -33,6 +36,10 @@ class HomeController < ApplicationController
   # Only allow a list of trusted parameters through.
   def post_params
     params.require(:post).permit(:heading, :subheading, :text, :link, :buttontext)
+  end
+
+  def image_params
+    params.require(:image).permit(images: [])
   end
   
 end

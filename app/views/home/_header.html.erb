@@ -1,34 +1,29 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1;">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    
+</head>
 
 
-<div class="headerimage">
-
-<div>
-<div class="row">
-<div class="col-md-6">
-<button class="btn btn-primary bt-lg">Donatii Astazi</button>
-</div>
-<div class="col-md-6">
-<button class="btn btn-secondary bt-lg">Visitati Facebook</button>
-</div>
-</div>
-</div>
-
-
-<nav class="navbar fixed-top navbar-expand-md navbar-light">
+<nav class="navbar navbar-static-top navbar-expand-md navbar-light navbar-custom" role="navigation">
   <%= link_to image_tag("romanul-removebg-preview.png", alt: "logo", height: 90, width: 90), root_path, class:"images" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto container">
 
       <li class="nav-item">
         <%= link_to "Școala ȋn limba romȃnă", home_scoalaromana_path, class:"btn" %>
       </li>
 
       <li class="nav-item">
-      <%# <div class="btn-group"> %>
+
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Despre Noi", home_desprenoi_path, class:"btn" %>
         <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,16 +34,12 @@
           <%= link_to "REGULAMENT DE FUNCȚIONARE", home_regulamente_path, class:"dropdown-item" %>
           <%= link_to "CONSILIUL DE ADMINISTRAŢIE", home_consiliul_path, class:"dropdown-item" %>
           <div class="dropdown-divider"></div>
-          <%# <a class="dropdown-item" href="#">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</a> %>
           <%= link_to "ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ", home_inscriere_path, class:"dropdown-item"%>
         </div> 
-        
         </div>
-        <%# </div> %>
       </li>
 
       <li class="nav-item">
-      <%# <div class="btn-group"> %>
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Eventimente", home_evenimente_path, class:"btn" %>
         <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
@@ -58,8 +49,7 @@
           <a class="dropdown-item" href="#">SERVICI ȘI AFACERI</a>
           <a class="dropdown-item" href="#">SONDAJE DE OPINIEE</a>
           <%= link_to "REZERVARE LOCURI", home_reservare_path, class:"dropdown-item"%>
-        </div> 
-        <%# </div> %>
+        </div>
 
         </div>
       </li>
@@ -73,10 +63,6 @@
       </li>
 
     </ul>
-    <%# <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> %>
   </div>
 </nav>
 
@@ -88,7 +74,8 @@
   /* background-image: url("https://romanulonline.org/wp-content/uploads/2020/11/hartford-ct.jpg"); */
 
   background-color: #002b7f;
-  min-height: 125px;
+  height: auto;
+  width: auto;
   color: #fcd116;
   
 
@@ -100,7 +87,7 @@
 
   /* Needed to position the navbar */
   /* position: fixed; */
-  min-width: 1000px;
+  z-index: 1;
 }
 
 .navbar ul {
@@ -182,16 +169,29 @@ cursor: pointer;
   float:left;
   color: #fcd116;
 }
+
+@media all and (max-width: 1000px) {  
+  .container {  
+    flex-wrap: wrap;  
+  } 
+  .container > li {  
+    flex-basis: 50%;  
+  }
+}
+
+
+
   </style>
 
 <script> 
 $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });
+
+$('.navbar-collapse btn').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> %>
+

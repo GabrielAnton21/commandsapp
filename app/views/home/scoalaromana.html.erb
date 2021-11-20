@@ -1,17 +1,16 @@
-
-<br><br><br><br><br>
-<div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
+<br>
+<div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; height: auto; width: auto;">
 <h1 class="display-3" id="heading">ȘCOALA &#206N LIMBA ROM&#194N&#194<h1>
 </div>
 
 <section id="section1">
-<nav class="navbar navbar-expand-md navbar-light">
-  <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light" style="height: auto; width: auto; background-color: white;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button> %>
+  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent1" data-toggle="collapse" data-target=".navbar-collapse">
+    <ul class="navbar-nav mr-auto" id="flex">
 
       <li class="nav-item">
         <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section2">Registration</a>
@@ -47,7 +46,7 @@
 <section>
 <br><br>
 
-<div class="jumbotron" style="max-height: 440px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
+<div class="jumbotron" style="height: auto; width: auto; padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi;">
 <%# DB text here %>
 18 octombrie 2021 (RO)
 <br>
@@ -789,7 +788,7 @@ for all parties involved. Fluent in English, Spanish and Italian and intermediat
   <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section1">Back To Top</a>
   <br><br>
   <section id="section8">
-  <div class="jumbotron" style="max-height: 670px; padding:30px; background-color: #002b7f; color: #FFFFFF;">
+  <div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi; height: auto; width: auto;">
 <h2>Why Learn Romanian?</h2>
 <br>
 <br>
@@ -831,6 +830,15 @@ Thank you, again. Mulțumim pentru interes!
 </div>
 </section>
 
+
+<% (0...@image.size).each do |image| %> 
+    <%= image_tag(url_for(@image[image])) %>
+    <%# <%= content_tag(:iframe,'', width: 1000, height: 1000, src: url_for(@image[image])) %> 
+<%end %>
+
+
+
+
 <style>
 #bold{
   font-weight: bold;
@@ -838,6 +846,13 @@ Thank you, again. Mulțumim pentru interes!
 #italic{
   font-style: italic;
   font-weight: bold;
+}
+#flex {  
+    flex-wrap: wrap;  
+  } 
+  #flex > li {  
+    flex-basis: 50%;  
+  }
 }
 </style>
 

@@ -1,0 +1,10 @@
+<br><br><br><br>
+<p id="notice"><%= notice %></p>
+
+
+<% (0...@image.images.size).each do |image| %> 
+    <%= image_tag(@image.images[image]) %>
+<%end %>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
