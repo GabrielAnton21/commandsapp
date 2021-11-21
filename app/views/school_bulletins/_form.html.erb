@@ -1,0 +1,157 @@
+<%= form_with(model: school_bulletin) do |form| %>
+  <% if school_bulletin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(school_bulletin.errors.count, "error") %> prohibited this school_bulletin from being saved:</h2>
+
+      <ul>
+        <% school_bulletin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bulletin %>
+    <%= form.text_field :bulletin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heading_registration %>
+    <%= form.text_field :heading_registration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text_registration %>
+    <%= form.text_field :text_registration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_student_reg_link %>
+    <%= form.text_field :new_student_reg_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_student_reg_btn_text %>
+    <%= form.text_field :new_student_reg_btn_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cont_student_reg_link %>
+    <%= form.text_field :cont_student_reg_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cont_student_reg_btn_text %>
+    <%= form.text_field :cont_student_reg_btn_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beginners_heading %>
+    <%= form.text_field :beginners_heading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beginners_subheading %>
+    <%= form.text_field :beginners_subheading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beginners_text %>
+    <%= form.text_field :beginners_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beginners_reg_link %>
+    <%= form.text_field :beginners_reg_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beginners_reg_btn_text %>
+    <%= form.text_field :beginners_reg_btn_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adults_heading %>
+    <%= form.text_field :adults_heading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adults_subheading %>
+    <%= form.text_field :adults_subheading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adults_text %>
+    <%= form.text_field :adults_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adults_reg_link %>
+    <%= form.text_field :adults_reg_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adults_reg_btn_text %>
+    <%= form.text_field :adults_reg_btn_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classes_offered_text %>
+    <%= form.text_field :classes_offered_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classes_offered_notice %>
+    <%= form.text_field :classes_offered_notice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prev_classes_text %>
+    <%= form.text_field :prev_classes_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image1_link %>
+    <%= form.text_field :image1_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2_link %>
+    <%= form.text_field :image2_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3_link %>
+    <%= form.text_field :image3_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4_link %>
+    <%= form.text_field :image4_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image5_link %>
+    <%= form.text_field :image5_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image6_link %>
+    <%= form.text_field :image6_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image7_link %>
+    <%= form.text_field :image7_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image8_link %>
+    <%= form.text_field :image8_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'mongoid', '~> 7.0.4'
 gem 'devise', '~> 4.8'
 
+gem 'sprockets-rails'
+gem 'jquery-rails'
+
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 gem "mini_magick"

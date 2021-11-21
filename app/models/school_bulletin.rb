@@ -1,0 +1,2 @@
+class SchoolBulletin < ApplicationRecord
+end

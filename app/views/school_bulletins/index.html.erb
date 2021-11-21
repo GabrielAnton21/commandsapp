@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>School Bulletins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bulletin</th>
+      <th>Heading registration</th>
+      <th>Text registration</th>
+      <th>New student reg link</th>
+      <th>New student reg btn text</th>
+      <th>Cont student reg link</th>
+      <th>Cont student reg btn text</th>
+      <th>Beginners heading</th>
+      <th>Beginners subheading</th>
+      <th>Beginners text</th>
+      <th>Beginners reg link</th>
+      <th>Beginners reg btn text</th>
+      <th>Adults heading</th>
+      <th>Adults subheading</th>
+      <th>Adults text</th>
+      <th>Adults reg link</th>
+      <th>Adults reg btn text</th>
+      <th>Classes offered text</th>
+      <th>Classes offered notice</th>
+      <th>Prev classes text</th>
+      <th>Image1 link</th>
+      <th>Image2 link</th>
+      <th>Image3 link</th>
+      <th>Image4 link</th>
+      <th>Image5 link</th>
+      <th>Image6 link</th>
+      <th>Image7 link</th>
+      <th>Image8 link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @school_bulletins.each do |school_bulletin| %>
+      <tr>
+        <td><%= school_bulletin.bulletin %></td>
+        <td><%= school_bulletin.heading_registration %></td>
+        <td><%= school_bulletin.text_registration %></td>
+        <td><%= school_bulletin.new_student_reg_link %></td>
+        <td><%= school_bulletin.new_student_reg_btn_text %></td>
+        <td><%= school_bulletin.cont_student_reg_link %></td>
+        <td><%= school_bulletin.cont_student_reg_btn_text %></td>
+        <td><%= school_bulletin.beginners_heading %></td>
+        <td><%= school_bulletin.beginners_subheading %></td>
+        <td><%= school_bulletin.beginners_text %></td>
+        <td><%= school_bulletin.beginners_reg_link %></td>
+        <td><%= school_bulletin.beginners_reg_btn_text %></td>
+        <td><%= school_bulletin.adults_heading %></td>
+        <td><%= school_bulletin.adults_subheading %></td>
+        <td><%= school_bulletin.adults_text %></td>
+        <td><%= school_bulletin.adults_reg_link %></td>
+        <td><%= school_bulletin.adults_reg_btn_text %></td>
+        <td><%= school_bulletin.classes_offered_text %></td>
+        <td><%= school_bulletin.classes_offered_notice %></td>
+        <td><%= school_bulletin.prev_classes_text %></td>
+        <td><%= school_bulletin.image1_link %></td>
+        <td><%= school_bulletin.image2_link %></td>
+        <td><%= school_bulletin.image3_link %></td>
+        <td><%= school_bulletin.image4_link %></td>
+        <td><%= school_bulletin.image5_link %></td>
+        <td><%= school_bulletin.image6_link %></td>
+        <td><%= school_bulletin.image7_link %></td>
+        <td><%= school_bulletin.image8_link %></td>
+        <td><%= link_to 'Show', school_bulletin %></td>
+        <td><%= link_to 'Edit', edit_school_bulletin_path(school_bulletin) %></td>
+        <td><%= link_to 'Destroy', school_bulletin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New School Bulletin', new_school_bulletin_path %>

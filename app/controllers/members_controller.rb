@@ -20,6 +20,7 @@ class MembersController < ApplicationController
   def edit
   end
 
+
   # POST /members or /members.json
   def create
     @member = Member.new(member_params)

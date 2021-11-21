@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_20_072943) do
+ActiveRecord::Schema.define(version: 2021_11_21_070843) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -79,6 +79,39 @@ ActiveRecord::Schema.define(version: 2021_11_20_072943) do
     t.string "link"
     t.string "buttontext"
     t.string "imagelink"
+  end
+
+  create_table "school_bulletins", force: :cascade do |t|
+    t.string "bulletin"
+    t.string "heading_registration"
+    t.string "text_registration"
+    t.string "new_student_reg_link"
+    t.string "new_student_reg_btn_text"
+    t.string "cont_student_reg_link"
+    t.string "cont_student_reg_btn_text"
+    t.string "beginners_heading"
+    t.string "beginners_subheading"
+    t.string "beginners_text"
+    t.string "beginners_reg_link"
+    t.string "beginners_reg_btn_text"
+    t.string "adults_heading"
+    t.string "adults_subheading"
+    t.string "adults_text"
+    t.string "adults_reg_link"
+    t.string "adults_reg_btn_text"
+    t.string "classes_offered_text"
+    t.string "classes_offered_notice"
+    t.string "prev_classes_text"
+    t.string "image1_link"
+    t.string "image2_link"
+    t.string "image3_link"
+    t.string "image4_link"
+    t.string "image5_link"
+    t.string "image6_link"
+    t.string "image7_link"
+    t.string "image8_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

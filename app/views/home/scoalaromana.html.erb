@@ -48,6 +48,7 @@
 
 <div class="jumbotron" style="height: auto; width: auto; padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi;">
 <%# DB text here %>
+<%= @school_bulletin.find(1).bulletin %>
 18 octombrie 2021 (RO)
 <br>
 Dragi părinţi, prieteni și susţinători ai cursurilor de limba romȃnă,
@@ -72,10 +73,11 @@ Romȃnul Corp
   <section id="section2">
     <div class="container jumbo">
       <div class="jumbotron">
-        <h2 id="bold">Romanian  Language – Spring 2022 Registration and Payment</h2>
+        <h2 id="bold"><%= @school_bulletin.find(1).heading_registration %></h2>
         <br>
         <%# DB Text here %>
-        <p>First classes start on 15-16 January, 2022. Please first register here for Romanian 
+        <%= @school_bulletin.find(1).text_registration %>
+        <%# <p>First classes start on 15-16 January, 2022. Please first register here for Romanian 
         for Beginners and Intermediary Romanian. You can make the payment using the panel on the right. 
         After completing the process, a Zoom link for the class will be sent to you before the start of the classes. Thank you!</p>
         <br>
@@ -84,12 +86,12 @@ Romȃnul Corp
         <p>Fee schedule for the 12-hour package  
         ▪ Romȃnul Corp members : $144 (at $12/hour). See *A Note on Benefits*   
         ▪ Non-members: $180 (at $15/hour)                   
-        We offer packages only.</p>
+        We offer packages only.</p> %>
 <br>
 <%# DB Link here %>
-<a href="https://docs.google.com/forms/d/1obLna-61-brp5yHFHz3ioMGpsKtlbEcGLp-kuQSzejg/viewform?edit_requested=true">New Student Registration - Spring 2022</a>
+<a href="https://docs.google.com/forms/d/1obLna-61-brp5yHFHz3ioMGpsKtlbEcGLp-kuQSzejg/viewform?edit_requested=true"><%= @school_bulletin.find(1).new_student_reg_btn_text%></a>
 <br>
-<a href="https://docs.google.com/forms/d/1rxroTN2p1nikQC4Mjeteh77gTmT6mzneSHt92Bfkxj4/viewform?edit_requested=true">Continuing Student Registration - Spring 2022</a>
+<a href="https://docs.google.com/forms/d/1rxroTN2p1nikQC4Mjeteh77gTmT6mzneSHt92Bfkxj4/viewform?edit_requested=true"><%= @school_bulletin.find(1).cont_student_reg_btn_text %></a>
 <%# DB Link here %>
 <br> 
 <br>     
@@ -126,17 +128,19 @@ Romȃnul Corp
 </div>
 
 <div class="jumbotron">
-<h2 id="bold">Romanian for Very Beginners with Music & Rhymes </h2>
-<h4 id="bold">starting in October on Saturday mornings.</h4>
+<h2 id="bold"><%= @school_bulletin.find(1).beginners_heading %></h2>
+<h4 id="bold"><%= @school_bulletin.find(1).beginners_subheading %></h4>
 <br>
-        <p>This is a music and rhymes class for children between 4 – 7 years old who  learn basic Romanian in a fun and interactive way. 
+<%= @school_bulletin.find(1).beginners_text %>
+        <%# <p>This is a music and rhymes class for children between 4 – 7 years old who  learn basic Romanian in a fun and interactive way. 
         Meeting via Zoom on Saturdays for 30-40 minutes.  This session is offering a total of 6 classes. Alunelu-alunelu, hai la joc!</p>
         <br>
         <p>We use PayPal for processing the payment. You can check out as Paypal Guest using any credit card. </p>
         <br>
         <p>Fees: $10/class for non-members and $8/class for Romanul Corp members.</p>
+        <br> %>
         <br>
-        <a href="#">Registration for Music and Rhymes</a>
+        <a href="<%= @school_bulletin.find(1).beginners_reg_link %>"><%= @school_bulletin.find(1).beginners_reg_btn_text %></a>
         <br>
         <br>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"><input name="cmd" type="hidden" value="_s-xclick" />
@@ -175,14 +179,15 @@ Romȃnul Corp
 <h2 id="bold">Romanian as Second Language for Adults </h2>
 <h4 id="bold">an online summer class for our American friends and relatives</h4>
 <br>
-        <p>The class offers an introduction to Romanian language with examples from daily life, including also aspects from 
+<%= @school_bulletin.find(1).adults_text %>
+        <%# <p>The class offers an introduction to Romanian language with examples from daily life, including also aspects from 
         Romanian culture. The course schedule is flexible and it will be determined together with the instructor at the most convenient dates and time for all the participants.</p>
         <br>
         <p>Fees: $18 per up to 90 minutes class (minimum 3 students per class). One module of course has six classes ($108 per module). </p>
         <br>
-        <p>To register, please click the button below. To make a payment, please use the panel on the right. </p>
+        <p>To register, please click the button below. To make a payment, please use the panel on the right. </p> %>
         <br>
-        <a href="https://docs.google.com/forms/d/1JOFDKz7Io6n6kx_aTr7BafU1pmELx_gAor5R8Wn-Q6Y/viewform?edit_requested=true">Romanian For Adults Registration</a>
+        <a href="<%= @school_bulletin.find(1).adults_reg_link %>"><%= @school_bulletin.find(1).adults_reg_btn_text %></a>
         <br>
         <br>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"><input name="cmd" type="hidden" value="_s-xclick" />
@@ -247,7 +252,7 @@ Romȃnul Corp
         from Romanian culture. The course schedule is flexible and it will be determined together with the instructor at 
         the most convenient dates and time for all the participants.</p>
         <hr>
-        <h6 id="italic">Saturday at 9, 10 and 11 AM/ Sunday at 11 AM, 12 PM, 1 PM. Time is listed as US Eastern Standard Time (EST) New York (GMT -5) (Bucharest -7)</h6>
+        <h6 id="italic"><%= @school_bulletin.find(1).classes_offered_text %>Saturday at 9, 10 and 11 AM/ Sunday at 11 AM, 12 PM, 1 PM. Time is listed as US Eastern Standard Time (EST) New York (GMT -5) (Bucharest -7)</h6>
         <h6 id="italic">The 12 sessions will be offered via Zoom only. In addition, we might schedule some special in-person sessions in a few locations in Connecticut.
 Thank you for your support and we are looking forward to another great school year together!</h6>
         <h6 id="italic">A Note on Benefits: As a Romȃnul Corp active member, you benefit throughout the year from discounts to all activities and events that require a fee. 
@@ -856,8 +861,9 @@ Thank you, again. Mulțumim pentru interes!
 }
 </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <%# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>  %>
+  <%# <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> %>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   

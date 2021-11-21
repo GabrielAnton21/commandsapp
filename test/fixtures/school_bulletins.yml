@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bulletin: MyString
+  heading_registration: MyString
+  text_registration: MyString
+  new_student_reg_link: MyString
+  new_student_reg_btn_text: MyString
+  cont_student_reg_link: MyString
+  cont_student_reg_btn_text: MyString
+  beginners_heading: MyString
+  beginners_subheading: MyString
+  beginners_text: MyString
+  beginners_reg_link: MyString
+  beginners_reg_btn_text: MyString
+  adults_heading: MyString
+  adults_subheading: MyString
+  adults_text: MyString
+  adults_reg_link: MyString
+  adults_reg_btn_text: MyString
+  classes_offered_text: MyString
+  classes_offered_notice: MyString
+  prev_classes_text: MyString
+  image1_link: MyString
+  image2_link: MyString
+  image3_link: MyString
+  image4_link: MyString
+  image5_link: MyString
+  image6_link: MyString
+  image7_link: MyString
+  image8_link: MyString
+
+two:
+  bulletin: MyString
+  heading_registration: MyString
+  text_registration: MyString
+  new_student_reg_link: MyString
+  new_student_reg_btn_text: MyString
+  cont_student_reg_link: MyString
+  cont_student_reg_btn_text: MyString
+  beginners_heading: MyString
+  beginners_subheading: MyString
+  beginners_text: MyString
+  beginners_reg_link: MyString
+  beginners_reg_btn_text: MyString
+  adults_heading: MyString
+  adults_subheading: MyString
+  adults_text: MyString
+  adults_reg_link: MyString
+  adults_reg_btn_text: MyString
+  classes_offered_text: MyString
+  classes_offered_notice: MyString
+  prev_classes_text: MyString
+  image1_link: MyString
+  image2_link: MyString
+  image3_link: MyString
+  image4_link: MyString
+  image5_link: MyString
+  image6_link: MyString
+  image7_link: MyString
+  image8_link: MyString

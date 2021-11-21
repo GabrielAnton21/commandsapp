@@ -10,6 +10,7 @@ class HomeController < ApplicationController
   def evenimente
   end
   def scoalaromana
+    @school_bulletin = SchoolBulletin.all
   end
   def donatii 
   end
@@ -38,6 +39,10 @@ class HomeController < ApplicationController
 
   def image_params
     params.require(:image).permit(images: [])
+  end
+
+  def school_bulletin_params
+    params.require(:school_bulletin).permit(:bulletin, :heading_registration, :text_registration, :new_student_reg_link, :new_student_reg_btn_text, :cont_student_reg_link, :cont_student_reg_btn_text, :beginners_heading, :beginners_subheading, :beginners_text, :beginners_reg_link, :beginners_reg_btn_text, :adults_heading, :adults_subheading, :adults_text, :adults_reg_link, :adults_reg_btn_text, :classes_offered_text, :classes_offered_notice, :prev_classes_text, :image1_link, :image2_link, :image3_link, :image4_link, :image5_link, :image6_link, :image7_link, :image8_link)
   end
   
 end

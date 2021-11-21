@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :school_bulletins
   resources :images
   resources :posts
   # get 'posts/index'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   devise_scope :admin do
   get '/admins/sign_out' => 'devise/sessions#destroy'
   end
+  # resources :members
   resources :members
   #get 'home/index'
   get 'home/desprenoi'
