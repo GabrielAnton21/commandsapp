@@ -1,9 +1,10 @@
 
 <p id="notice"><%= notice %></p>
-<br><br><br><br>
+<div class="jumbotron" style="background-color:white;">
 <h1>Posts</h1>
-
-<table>
+<br>
+<table style="display: inline-block;" width="auto" border="1"
+cellpadding="6">
   <thead>
     <tr>
       <th>Heading</th>
@@ -35,7 +36,8 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%# <%= link_to 'New Post', new_post_path %>
+</div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

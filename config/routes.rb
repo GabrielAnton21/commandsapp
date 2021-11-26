@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   resources :school_bulletins
   resources :images
   resources :posts
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   get 'home/consiliul'
   get 'home/inscriere'
   get 'home/reservare'
+  get 'home/sondaje'
 
   get 'home/donatii'
   get 'home/scoalaromana'

@@ -29,7 +29,7 @@
       </li>
 
       <li class="nav-item">
-
+  
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Despre Noi", home_desprenoi_path, class:"btn" %>
         <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,8 +52,8 @@
     <span class="sr-only">Toggle Dropdown</span>
   </button>
         <div class="dropdown-menu" style="color: #FFFF00;">
-          <a class="dropdown-item" href="#">SERVICI ȘI AFACERI</a>
-          <a class="dropdown-item" href="#">SONDAJE DE OPINIEE</a>
+          <%= link_to "SERVICI ȘI AFACERI", services_path, class:"dropdown-item"%>
+          <%= link_to "SONDAJE DE OPINIEE", home_sondaje_path, class:"dropdown-item"%>
           <%= link_to "REZERVARE LOCURI", home_reservare_path, class:"dropdown-item"%>
         </div>
 

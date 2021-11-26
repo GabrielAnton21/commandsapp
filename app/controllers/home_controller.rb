@@ -24,6 +24,8 @@ class HomeController < ApplicationController
   end
   def misiuni
   end
+  def sondaje
+  end
 
 
   private

@@ -1,4 +1,7 @@
-<br><br><br><br>
+
+
+<% if admin_signed_in?%>
+<br><br>
 <p id="notice"><%= notice %></p>
 
 <h1>Images</h1>
@@ -24,3 +27,4 @@
 <br>
 
 <%= link_to 'New Image', new_image_path %>
+<%end%>

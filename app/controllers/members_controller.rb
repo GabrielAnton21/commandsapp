@@ -29,6 +29,9 @@ class MembersController < ApplicationController
       if @member.save
         format.html { redirect_to home_inscriere_path, notice: "Member was successfully created." }
         # format.json { render :show, status: :created, location: @member }
+      # elsif authenticate_admin
+      #   format.html { redirect_to @member, notice: "Member was successfully created." }
+      #   format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @member.errors, status: :unprocessable_entity }

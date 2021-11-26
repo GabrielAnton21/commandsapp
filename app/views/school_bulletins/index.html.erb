@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-<h1>School Bulletins</h1>
-
-<table>
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
+<h1>School Bulletin</h1>
+<br>
+<table style="display: inline-block;" width="auto" border="1"
+cellpadding="6"  >
   <thead>
     <tr>
       <th>Bulletin</th>
@@ -70,7 +73,7 @@
         <td><%= school_bulletin.image8_link %></td>
         <td><%= link_to 'Show', school_bulletin %></td>
         <td><%= link_to 'Edit', edit_school_bulletin_path(school_bulletin) %></td>
-        <td><%= link_to 'Destroy', school_bulletin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# <td><%= link_to 'Destroy', school_bulletin, method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
     <% end %>
   </tbody>
@@ -78,4 +81,9 @@
 
 <br>
 
-<%= link_to 'New School Bulletin', new_school_bulletin_path %>
+<%# <%= link_to 'New School Bulletin', new_school_bulletin_path %>
+</div>
+
+<style>
+
+</style>

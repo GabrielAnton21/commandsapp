@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_title: MyString
+  service_contact: MyString
+  service_type: MyString
+  service_address: MyString
+  service_owner: MyString
+  service_ad_image_link: MyString
+
+two:
+  service_title: MyString
+  service_contact: MyString
+  service_type: MyString
+  service_address: MyString
+  service_owner: MyString
+  service_ad_image_link: MyString

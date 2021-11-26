@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_21_070843) do
+ActiveRecord::Schema.define(version: 2021_11_26_143859) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -110,6 +110,17 @@ ActiveRecord::Schema.define(version: 2021_11_21_070843) do
     t.string "image6_link"
     t.string "image7_link"
     t.string "image8_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "service_title"
+    t.string "service_contact"
+    t.string "service_type"
+    t.string "service_address"
+    t.string "service_owner"
+    t.string "service_ad_image_link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
