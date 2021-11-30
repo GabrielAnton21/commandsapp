@@ -1,7 +1,9 @@
 
 <br><br><br><br>
 <% if admin_signed_in? %>
-<div class="jumbotron">
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
 <p>
   <strong>First name:</strong>
   <%= @member.first_name %>
@@ -45,6 +47,9 @@
 <%= link_to 'Back', members_path %>
 </div>
 <%else%>
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
 <h2>RomanulCorp Sign-In</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -72,6 +77,7 @@
 
 <%= render "devise/shared/links" %>
 <%end%>
+</div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

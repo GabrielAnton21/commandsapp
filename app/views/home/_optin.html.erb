@@ -1,5 +1,5 @@
-<div class="bg-img">
-  <form action="/action_page.php" class="contain">
+<div class="jumbotron" id="jumbo" style="overflow:hidden;">
+  <%# <form action="/action_page.php" class="contain">
     <h1>Donate</h1>
 
     <label for="email"><b>Name</b></label>
@@ -9,11 +9,37 @@
     <input type="password" placeholder="Enter Address" name="psw" required>
 
     <button type="submit" class="btn-primary">Donate</button>
-  </form>
+  </form> %>
+<div style="background-color: white; float:right; padding:3%; margin:0.5%;">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<h4 style="text-align: center;"><input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="QKEC3G3X9P3RJ" /><span style="color: #000080;">PAYPAL</span></h4>
+<table>
+<tbody>
+<tr>
+<td><input name="on0" type="hidden" value="Name" />Name</td>
+</tr>
+<tr>
+<td><input maxlength="200" name="os0" type="text" /></td>
+</tr>
+<tr>
+<td><input name="on1" type="hidden" value="Email address" />Email address</td>
+</tr>
+<tr>
+<td><input maxlength="200" name="os1" type="text" /></td>
+</tr>
+</tbody>
+</table>
+<br>
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" type="image" /> <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form><!-- /wp:html -->
+
+<!-- wp:html -->
+<p style="text-align: center;"> </p>
+<!-- /wp:paragraph -->
+</div>
 </div>
 
 <style>
-.bg-img {
+#jumbo {
   /* The image used */
   background-image: url("https://romanulonline.org/wp-content/uploads/2019/11/frontpage00-1024x394.jpg");
 

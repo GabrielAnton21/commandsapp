@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :add_sections_to_bulletins
   resources :services
   resources :school_bulletins
   resources :images

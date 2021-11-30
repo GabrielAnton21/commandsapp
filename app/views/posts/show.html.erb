@@ -1,6 +1,8 @@
 <br><br><br><br>
 <p id="notice"><%= notice %></p>
-
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
 <p>
   <strong>Heading:</strong>
   <%= @post.heading %>
@@ -27,12 +29,13 @@
 </p>
 
 <p>
-  <strong>Buttontext:</strong>
+  <strong>Image Link:</strong>
   <%= @post.imagelink %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

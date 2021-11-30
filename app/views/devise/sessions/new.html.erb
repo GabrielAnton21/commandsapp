@@ -1,4 +1,7 @@
 <br><br><br><br><br>
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
 <h2>RomanulCorp Sign-In</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,4 +28,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-
+</div>

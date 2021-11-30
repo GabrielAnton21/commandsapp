@@ -1,7 +1,19 @@
+<body style="font-family: 'Cormorant Garamond', serif;">
 <br>
-<div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; height: auto; width: auto;">
+<%# <div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; height: auto; width: auto;">
 <h1 class="display-3" id="heading">ȘCOALA &#206N LIMBA ROM&#194N&#194<h1>
-</div>
+</div> %>
+
+
+<div class="row py-5">
+      <div class="col-lg-12 mx-auto">
+        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f;">
+          <h1 class="display-4">ȘCOALA &#206N LIMBA ROM&#194N&#194</h1>
+          <p class="lead">Select a category from the list below</p>
+          </p>
+        </div>
+      </div>
+    </div>
 
 <section id="section1">
 <nav class="navbar navbar-expand-md navbar-light" style="height: auto; width: auto; background-color: white;">
@@ -48,11 +60,13 @@
 
 <div class="jumbotron" style="height: auto; width: auto; padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi;">
 <%# DB text here %>
+<%= @school_bulletin.find(1).date %>
+<br>
+<br>
+<%= @school_bulletin.find(1).greeting %>
+<br>
+<br>
 <%= @school_bulletin.find(1).bulletin %>
-18 octombrie 2021 (RO)
-<br>
-Dragi părinţi, prieteni și susţinători ai cursurilor de limba romȃnă,
-<br>
 Școala ȋn limba romȃnă iniţiată de organizaţia non-profit Romȃnul Corp din Connecticut continuă cu success. Semestrul trecut am avut ca temă familia noastră, ȋn acest semestru călătorim virtual prin Romȃnia. Copiii ȋnvaţă mai multe despre locuri din Romȃnia și despre istoria lor și a familei lor. Ȋn “călătoriile” lor ȋnvăţă cuvinte noi, ȋmbunătățesc pronunţia și abordează gramatica limbii romȃne.
 Călătoria virtuală ȋncepe la aeroport. Copiii ȋnvață despre diverse mijloace de transport, cum să exprime direcții, distanțe și ore, cum să folosească harta, vizitȃnd orașe din Romȃnia și atracţiile din ȋmprejurimi, frumuseți naturale sau de interes istoric.
 Nivel 1 ȋnvață alfabetul limbii romȃne, cu accent pe sunetele și literele specifice limbii romȃne, exersează formule de salut și prezentare, ȋnvată poezii și cȃntece.
@@ -62,9 +76,12 @@ Cursurile normale continuă pȃnă pe 12 decembrie. Vă reamintim că membrii Ro
 Cursul de Music & Rhymes ȋncepe pe 23 octombrie; părinţii ȋnregistraţi au fost deja anunţaţi.
 * Nu uitaţi de invitaţia făcută de Romȃnul Corp ȋntregii comunităţi romȃnești din Connecticut și din statele din jur la sărbătoarea Zilei Naţionale a Romȃniei de anul acesta, organizată ȋn avans sambata 13 noiembrie ȋn New Haven CT unde avem ca invitaţi ȋn spectacol extraordinar grupul folcloric “Fraţi la bine și la greu” (detalii și rezervări de bilete la https://romanulonline.org/). Copiii sub 16 ani au intrarea liberă ȋn mod special la acest eveniment pentru a nu uita de ziua Marii Uniri de la 1 decembrie 1918 și pentru a se conecta cu elemente ale culturii tradiţionale romȃnești.
 <br>
-Vă mulţumim pentru colaborare, sprijin și entuziasm și vă așteptăm alături de noi.
+<br>
+<%= @school_bulletin.find(1).closing %>
+<br>
 <br>
 Romȃnul Corp
+<br>
 <br>
 “Ȋmpreună ne este mai bine”
 </div>
@@ -870,6 +887,7 @@ Thank you, again. Mulțumim pentru interes!
 </div>
 </section>
 
+</body>
 
 <%# <% (0...@image.count).each do |image| %> 
     <%# <%= image_tag(url_for(@image[image])) %> 
@@ -900,6 +918,7 @@ Thank you, again. Mulțumim pentru interes!
   font-size: 15px; important!
   padding: 20px;
 }
+
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">

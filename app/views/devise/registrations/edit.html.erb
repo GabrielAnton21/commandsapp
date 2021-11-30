@@ -1,3 +1,6 @@
+<div class="jumbotron" style="overflow: auto; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;">
 <% if admin_signed_in? %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -43,3 +46,4 @@
 
 <%= link_to "Back", :back %>
 <% end %>
+</div>
