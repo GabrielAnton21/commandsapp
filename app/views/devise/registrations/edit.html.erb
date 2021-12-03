@@ -1,7 +1,7 @@
 <div class="jumbotron" style="overflow: auto; 
     text-overflow: ellipsis; 
     word-wrap: break-word;">
-<% if admin_signed_in? %>
+<% if admin_signed_in? %> 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -45,5 +45,5 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
-<% end %>
+<% end %> 
 </div>

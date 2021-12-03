@@ -11,12 +11,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <%# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>  %>
   <%# <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> %>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </head>
 
 
 <nav class="navbar navbar-static-top navbar-expand-md navbar-light navbar-default" role="navigation">
-  <%= link_to image_tag("romanul-removebg-preview.png", alt: "logo", height: 90, width: 90), root_path, class:"images" %>
+  <%= link_to image_tag("romanul-removebg-preview.png", alt: "logo", height: 85, width: 85), root_path, class:"images" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,29 +32,29 @@
   
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
         <%= link_to "Despre Noi", home_desprenoi_path, class:"btn" %>
-        <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="badge badge-pill dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <div class="dropdown-menu">
-          <%= link_to "MISIUNE ȘI OBIECTIVE", home_misiuni_path, class:"dropdown-item" %>
-          <%= link_to "REGULAMENT DE FUNCȚIONARE", home_regulamente_path, class:"dropdown-item" %>
-          <%= link_to "CONSILIUL DE ADMINISTRAŢIE", home_consiliul_path, class:"dropdown-item" %>
+        <div class="dropdown-menu" style="background-color: #002b7f; color: white;">
+          <%= link_to "MISIUNE ȘI OBIECTIVE", home_misiuni_path, class:"dropdown-item", style:"color: white;" %>
+          <%= link_to "REGULAMENT DE FUNCȚIONARE", home_regulamente_path, class:"dropdown-item", style:"color: white;" %>
+          <%= link_to "CONSILIUL DE ADMINISTRAŢIE", home_consiliul_path, class:"dropdown-item", style:"color: white;" %>
           <div class="dropdown-divider"></div>
-          <%= link_to "ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ", home_inscriere_path, class:"dropdown-item"%>
+          <%= link_to "ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ", home_inscriere_path, class:"dropdown-item", style:"color: white;"%>
         </div> 
         </div>
       </li>
 
       <li class="nav-item">
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <%= link_to "Eventimente", home_evenimente_path, class:"btn" %>
-        <button class="badge badge-pill badge-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <%= link_to "Eventimente", root_path, class:"btn" %>
+        <button class="badge badge-pill dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-        <div class="dropdown-menu" style="color: #FFFF00;">
-          <%= link_to "SERVICI ȘI AFACERI", services_path, class:"dropdown-item"%>
-          <%= link_to "SONDAJE DE OPINIEE", home_sondaje_path, class:"dropdown-item"%>
-          <%= link_to "REZERVARE LOCURI", home_reservare_path, class:"dropdown-item"%>
+        <div class="dropdown-menu" style="background-color: #002b7f; ">
+          <%= link_to "SERVICI ȘI AFACERI", services_path, class:"dropdown-item", style:"color: white;"%>
+          <%= link_to "SONDAJE DE OPINIEE", home_sondaje_path, class:"dropdown-item", style:"color: white;"%>
+          <%= link_to "REZERVARE LOCURI", home_reservare_path, class:"dropdown-item", style:"color: white;"%>
         </div>
 
         </div>
@@ -80,9 +80,11 @@
   /* background-image: url("https://romanulonline.org/wp-content/uploads/2020/11/hartford-ct.jpg"); */
 
   background-color: #002b7f;
+  background-image: linear-gradient(to bottom right, #002b7f, #fcd116, #ce1126);
   /* height: auto;
   width: auto; */
   color: #fcd116;
+  
   
 
   /* Center and scale the image nicely */
@@ -93,7 +95,7 @@
 
   /* Needed to position the navbar */
   /* position: fixed; */
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .navbar ul {
@@ -102,15 +104,15 @@
 }
 
  .btn{
-    font-size: 18px;
-    color: #FFFFFF;
+    font-size: 30px;
+    color: #002b7f;
     font-weight: bold;
     
 }
 
 .btn:hover{
   font-size: 19.5px;
-  color: #fcd116;
+  color: #ce1126;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
@@ -123,13 +125,13 @@
 }
 
 .navbar-brand:hover{
-  color:#fcd116
+  color:#ce1126
 }
 
 .badge{
   /* width: 100%;
   height: 100%; */
-  font-size: 18px;
+  font-size: 20px;
   color: #fcd116;
   font-weight: bold;
   /* box-sizing: border-box; */
@@ -147,16 +149,20 @@
     /* float: right; */
     box-sizing: border-box;
     display: inline;
-    color: #FFFFFF; !important
+    color: #002b7f; !important
     width: 20%; !important
     height: 20%; !important
     border: none; !important
     
 }
 
+.dropdown-item{
+  color: white;
+}
+
 .navbar li {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px;
 }
 
@@ -168,7 +174,7 @@ cursor: pointer;
 }
 
 .badge-pill:hover{
-  color: #fcd116;
+  color: #ce1126;
 }
 
 /* .navbar-toggler-icon{
@@ -189,11 +195,11 @@ cursor: pointer;
 
   </style>
 
-<script> 
+<%# <script> 
 $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });
 
-</script>
+</script> %>
 
 

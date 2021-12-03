@@ -1,6 +1,6 @@
 
 
-<div style="background-color: #FFFFFF; height:auto; width:auto; bottom: 0px;
+<div style="background-color: #002b7f; color: white; height:auto; width:auto; bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
@@ -10,23 +10,23 @@
 <br>
 <div class="justify-content-center" style="text-align: center;">
 <p>Românul is a 501(c)(3) not for profit organization.
-This work by Romanul Corp. is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0 Unported License.</a></p> 
+This work by Romanul Corp. is licensed under a <a style="color: #fcd116" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0 Unported License.</a></p> 
 </div>
 <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <%= link_to "Despre Noi", home_desprenoi_path, class:"nav-link" %>
+  <li class="nav-item" style="color: #fcd116">
+    <%= link_to "Despre Noi", home_desprenoi_path, class:"nav-link", style:"color: #fcd116" %>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.facebook.com/romanulonline">Facebook</a>
+  <li class="nav-item" >
+    <a class="nav-link" style="color: #fcd116" href="https://www.facebook.com/romanulonline">Facebook</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Voluntariat</a>
+  <li class="nav-item" style="color: #fcd116", >
+    <a class="nav-link" style="color: #fcd116" href="#">Voluntariat</a>
   </li>
 </ul>
 
 <% if admin_signed_in? %>
-<%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class:"nav-item" %>
+<%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class:"nav-item", style:"color: #fcd116" %>
 <% else %>
-<%= link_to "RomanulCorp Sign-In", new_admin_session_path, class:"nav-item" %>
+<%= link_to "RomanulCorp Sign-In", new_admin_session_path, class:"nav-item", style:"color: #fcd116" %>
 <% end %>
 </div>

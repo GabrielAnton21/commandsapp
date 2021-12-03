@@ -1,7 +1,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="commandsapp\app\assets\stylesheets\inscriere.css">
+<%# <link rel="stylesheet" type="text/css" href="commandsapp\app\assets\stylesheets\inscriere.css"> %>
 
 </head>
 <br>
@@ -11,15 +11,15 @@
 <body style="font-family: 'Cormorant Garamond', serif;">
 <div class="row py-5" id="sectiontop">
       <div class="col-lg-12 mx-auto">
-        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f;">
+        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f; border: 1px solid;">
           <h1 class="display-4">ÎNSCRIERE ȘI COTIZAȚIA ANUALĂ</h1>
-          <p class="lead">Select a category from the list below</p>
+          <p class="lead">Sign Up With RomanulCorp And Pay Here</p>
           </p>
         </div>
       </div>
     </div>
 
-<div class="mainPanel">
+<div class="mainPanel" style="border: 1px solid;  padding-top: 8%;">
 <%= form_for Member.new do |f| %>
   <div class="form-group">
     <%= f.label :first_name %>
@@ -60,7 +60,7 @@
 
 <br>
 
-<div class="mainPanel">
+<div class="mainPanel" style="border: 1px solid;  padding-top: 8%;">
 <p>Plata cotizației anuale se poate efectua cu orice tip de credit sau debit card, prin serviciul bancar securizat <em>PayPal</em>: selectați mai jos valoarea corespunzătoare, introduceţi numele dumneavoastră, apoi apăsați ”<strong>Pay Now</strong>”. Puteți plăti prin metoda "<em>PayPal Guest Checkout</em>" dacă nu aveți cont <em>PayPal</em>.<br />Cotizațiile membrilor organizației sunt scutite de taxe (<em>tax deductible</em>).</p>
 <!-- /wp:paragraph -->
 
@@ -103,6 +103,62 @@
 </div>
 <br><br>
 </body>
+
+<style>
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  /* background: transparent; */
+  border: none;
+  /* border-bottom: 4px solid #eee; */
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 1.3rem; 
+  font-family: 'Cormorant Garamond', serif; /* use google font */
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #002b7f; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: white; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+  color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+</style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

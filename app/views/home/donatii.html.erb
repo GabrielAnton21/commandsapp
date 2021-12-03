@@ -5,14 +5,15 @@
 <body style="font-family: 'Cormorant Garamond', serif;">
 <div class="row py-5">
       <div class="col-lg-12 mx-auto">
-        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f; width:auto;">
+        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f; width:auto; border: 1px solid;">
           <h1 class="display-4">DONAȚII</h1>
+          <p class="lead">Donate Here</p>
           </p>
         </div>
       </div>
     </div>
 
-<div class="mainPanel">
+<div class="mainPanel" style="border: 1px solid;">
 
 <div class="jumbotron" style="max-height: 440px; padding:30px;">
 <p>You can always donate to Romȃnul via one of the methods listed below. Your donation will support our educational and cultural programs, as well as philanthropic and charitable activities, as part of the objectives of Romanul Corp organization.
@@ -81,6 +82,62 @@ Vă mulțumim!</p>
 <p>Românul Corp is a not for profit 501(c)(3) organization which promotes Romanian culture and values in the State of Connecticut and in the USA. Donations, contributions and membership fees are tax-deductible within legal limits.</p>
 </div>
 </body>
+
+<style>
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  /* background: transparent; */
+  border: none;
+  /* border-bottom: 4px solid #eee; */
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 1.3rem; 
+  font-family: 'Cormorant Garamond', serif; /* use google font */
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #002b7f; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: white; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+  color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+</style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

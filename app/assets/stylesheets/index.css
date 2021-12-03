@@ -401,7 +401,7 @@ div#all {
   outline: none;
   /* background: transparent; */
   border: none;
-  border-bottom: 4px solid #eee;
+  /* border-bottom: 4px solid #eee; */
   letter-spacing: 0.0625em;
   padding: 8px 10px; 
   text-transform: uppercase;

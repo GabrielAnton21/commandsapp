@@ -7,9 +7,9 @@
 
 <div class="row py-5">
       <div class="col-lg-12 mx-auto">
-        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f;">
+        <div class="text-white p-5 shadow-sm rounded banner" style="background-color: #002b7f; border: 1px solid;">
           <h1 class="display-4">ȘCOALA &#206N LIMBA ROM&#194N&#194</h1>
-          <p class="lead">Select a category from the list below</p>
+          <p class="lead">Romanian Language School</p>
           </p>
         </div>
       </div>
@@ -25,31 +25,31 @@
     <ul class="navbar-nav mr-auto justify-content-center" id="flex">
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section2" style="font-size: 12px; display: inline-block;">Registration</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section2" style="font-size: 12px; display: inline-block; padding: 20px;">Registration</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section3" style="font-size: 12px; display: inline-block;">Classes Offered</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section3" style="font-size: 12px; display: inline-block; padding: 20px;">Classes Offered</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section4" style="font-size: 12px; display: inline-block;">Instructors</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section4" style="font-size: 12px; display: inline-block; padding: 20px;">Instructors</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section5" style="font-size: 12px; display: inline-block;">Rules And Policies</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section5" style="font-size: 12px; display: inline-block; padding: 20px;">Rules & Policies</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section6" style="font-size: 12px; display: inline-block;">Sponsors And Donors</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section6" style="font-size: 12px; display: inline-block; padding: 20px;">Sponsors & Donors</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section7" style="font-size: 12px; display: inline-block;">School Board</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section7" style="font-size: 12px; display: inline-block; padding: 20px;">School Board</a>
       </li>
 
       <li class="nav-item">
-        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section8" style="font-size: 12px; display: inline-block;">Why Learn Romanian?</a>
+        <a class="ct-btn-scroll ct-js-btn-scroll buttonfx slideleft bouncein" href="#section8" style="font-size: 12px; display: inline-block; padding: 20px;">Why Learn Romanian?</a>
       </li>
 
     </ul>
@@ -58,7 +58,7 @@
 <section>
 <br><br>
 
-<div class="jumbotron" style="height: auto; width: auto; padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi;">
+<div class="jumbotron" style="height: auto; width: auto; padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi; border: 1px solid;">
 <%# DB text here %>
 <%= @school_bulletin.find(1).date %>
 <br>
@@ -845,7 +845,7 @@ for all parties involved. Fluent in English, Spanish and Italian and intermediat
 
   <br><br>
   <section id="section8">
-  <div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi; height: auto; width: auto;">
+  <div class="jumbotron" style="padding:30px; background-color: #002b7f; color: #FFFFFF; font-size: 1.25vi; height: auto; width: auto; border: 1px solid;">
 <h2>Why Learn Romanian?</h2>
 <br>
 <br>
@@ -919,11 +919,71 @@ Thank you, again. Mulțumim pentru interes!
   padding: 20px;
 }
 
+.navbar ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  /* background: transparent; */
+  border: none;
+  /* border-bottom: 4px solid #eee; */
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 1.3rem; 
+  font-family: 'Cormorant Garamond', serif; /* use google font */
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #002b7f; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: white; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+  color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
 </style>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> %>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <%# <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>  %>
   <%# <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> %>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+<%# <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    %>
